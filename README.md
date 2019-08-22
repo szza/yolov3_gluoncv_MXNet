@@ -7,7 +7,10 @@ MXNet的一个开源项目gluoncv(链接：https://github.com/dmlc/gluon-cv/ ) �
   建议Darknet.py --> yolov3.py --> train_yolo3.py --> yolo_target.py
 
 '''
- '''
+ ''' 
+ 
+ 
+ 
             objectness.squeeze(axis=-1) 
                 shape = [1, 3549, 9] 
             class_targets              
