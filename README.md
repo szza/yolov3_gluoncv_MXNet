@@ -7,21 +7,18 @@ MXNet的一个开源项目gluoncv(链接：https://github.com/dmlc/gluon-cv/ ) �
   建议Darknet.py --> yolov3.py --> train_yolo3.py --> yolo_target.py
 
 '''
- ''' 
- 
- 
- 
+            """
             objectness.squeeze(axis=-1) 
                 shape = [1, 3549, 9] 
             class_targets              
                 shape = [gt_ids.shape[0], 3549, 9, self._num_class] 
                 默认值全是-1，即忽略
                 
-            '''
+            """
             class_targets = nd.one_hot(objectness.squeeze(axis=-1), depth=self._num_class)
             class_targets[:] = -1  # prefill -1 for ignores
            
-            '''
+            """
             # for each ground-truth, find the best matching anchor within the particular grid
             # for instance, center of object 1 reside in grid (3, 4) in (16, 16) feature map
             # then only the anchor in (3, 4) is going to be matched
@@ -41,7 +38,7 @@ MXNet的一个开源项目gluoncv(链接：https://github.com/dmlc/gluon-cv/ ) �
             gtw shape:[1, M, 1]
             gth shape:[1, M, 1]
             
-            ''' 
+            """
             gtx, gty, gtw, gth = self.bbox2center(gt_boxes)  
             shift_gt_boxes = nd.concat(-0.5 * gtw, -0.5 * gth, 0.5 * gtw, 0.5 * gth, dim=-1)  # zero center  
             
