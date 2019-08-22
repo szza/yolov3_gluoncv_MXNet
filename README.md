@@ -6,7 +6,9 @@ MXNet的一个开源项目gluoncv(链接：https://github.com/dmlc/gluon-cv/ ) �
 阅读顺序：
   建议Darknet.py --> yolov3.py --> train_yolo3.py --> yolo_target.py
 
-'''
+''' 
+
+
             """
             objectness.squeeze(axis=-1) 
                 shape = [1, 3549, 9] 
@@ -46,6 +48,7 @@ MXNet的一个开源项目gluoncv(链接：https://github.com/dmlc/gluon-cv/ ) �
             shift_anchor_boxes = self.bbox2corner(anchor_boxes) # 又转换为四角坐标
 
             ious = nd.contrib.box_iou(shift_anchor_boxes, shift_gt_boxes).transpose((1, 0, 2))  # (1, 9, M)
+            
 
-'''
+''' 
 
