@@ -6,7 +6,7 @@ MXNet的一个开源项目gluoncv(链接：https://github.com/dmlc/gluon-cv/ ) �
 阅读顺序：
   建议Darknet.py --> yolov3.py --> train_yolo3.py --> yolo_target.py
 
-''' 
+
 
 
             """
@@ -50,5 +50,5 @@ MXNet的一个开源项目gluoncv(链接：https://github.com/dmlc/gluon-cv/ ) �
             ious = nd.contrib.box_iou(shift_anchor_boxes, shift_gt_boxes).transpose((1, 0, 2))  # (1, 9, M)
             
 
-''' 
+ 
 
